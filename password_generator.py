@@ -2,6 +2,7 @@ import random
 import string
 
 password = ''
+rand_letter = None
 pass_len = None
 affirmitive = ['Yes', 'yes', 'Y', 'y']
 negative = ['No', 'no', 'N', 'n']
@@ -31,7 +32,8 @@ while True:
 if pass_type in ['complex']:
     temp = 0
     if temp < pass_len:
-        password[temp] = random.choice(string.printable)
+        rand_letter = random.choice(string.printable)
+        password = password + str(rand_letter)
         temp = temp + 1
 
 else:
